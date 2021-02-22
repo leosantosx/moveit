@@ -1,15 +1,15 @@
 import React from 'react'
-import ExpererienceBar from './components/ExperienceBar/ExperienceBar';
+import GlobalStyle from './styles/global'
+import Container from './components/Container/Container'
+import ExpererienceBar from './components/ExperienceBar/ExperienceBar'
 
-import './styles/global.css'
-import './styles/base.css'
-
-function App() {
+const App: React.FC = () =>  {
   return (
-    <div className="container">
+    <Container>
+      <GlobalStyle />
       <ExpererienceBar />
-    </div>
-  );
+    </Container>
+  )
 }
 
 export default App
