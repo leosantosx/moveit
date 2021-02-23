@@ -27,7 +27,7 @@ const Header = styled.header`
     
 `
 
-const ExpererienceBar: React.FC = () => {
+const ExperienceBar: React.FC = () => {
     return (
         <Header>
             <span>0 xp</span>
@@ -41,4 +41,4 @@ const ExpererienceBar: React.FC = () => {
     )
 }
 
-export default ExpererienceBar
+export default ExperienceBar
