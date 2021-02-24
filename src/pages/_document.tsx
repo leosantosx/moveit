@@ -8,7 +8,6 @@ export default class MyDocument extends Document{
                 <link rel="shortcut icon" href="favicon.png" type="image/png-icon"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap" rel="stylesheet"/>
-                <title>Home | Move.it</title>
             </Head>
             <body>
                 <Main/>
