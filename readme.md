@@ -5,14 +5,18 @@
 
 <p>O Move.it é um projeto da RocketSeat da Next Level Week, onde o instrutor Diego Fernandes ensina como dominar ferramentas de forma rápida e eficiente. Essa semana foi bem intensa, com muito código e desafios. tendo como fonte de estudos o Desenvolvivento web</p>
 
+<img src="./public/gif/gif.gif">
+
+
 ## 🚀 Tecnologias utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-- [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-support)
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
-- [React](https://reactjs.org/)
+- [ReactJS](https://reactjs.org/)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [Yarn](https://yarnpkg.com/)
 
 ## 📝 Licença
