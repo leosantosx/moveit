@@ -3,7 +3,7 @@
 ![Projeto](https://img.shields.io/badge/leosantosx-moveit-blue)
 ![licence mit](https://img.shields.io/badge/license-MIT-green)
 
-<p>O Move.it é um projeto da RocketSeat da Next Level Week, onde o instrutor Diego Fernandes ensina como dominar ferramentas de forma rápida e eficiente. Essa semana foi bem intensa, com muito código e desafios. tendo como fonte de estudos o Desenvolvivento web</p>
+<p>O Move.it é um projeto da RocketSeat chamado Next Level Week, onde o instrutor Diego Fernandes ensina como dominar ferramentas de forma rápida e eficiente. Essa semana foi bem intensa, com muito código e desafios. tendo como fonte de estudos o Desenvolvivento Web</p>
 
 <img src="./public/gif/gif.gif">
 
