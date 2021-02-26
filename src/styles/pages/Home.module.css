@@ -14,3 +14,9 @@
     gap: 6.25rem;
     align-content: center;
 }
+
+.page404{
+    width: 40em;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
