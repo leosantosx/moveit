@@ -1,14 +1,16 @@
 import Head from 'next/head'
 import { GetServerSideProps } from 'next'
+import styles from '../styles/pages/Home.module.css'
+
 import { ExperienceBar } from '../components/ExperienceBar'
 import { Profile } from '../components/Profile'
 import { Countdown } from '../components/Countdown';
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { ChallengeBox } from '../components/ChallengeBox'
+
 import { CountdownProvider } from '../contexts/countdownContext';
 import { ChallengesProvider } from '../contexts/ChallengeContext';
 
-import styles from '../styles/pages/Home.module.css'
 import React from 'react';
 
 interface HomeProps {
