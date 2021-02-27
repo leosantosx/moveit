@@ -1,0 +1,62 @@
+.container{
+    background-color: var(--blue);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: center;
+}
+
+.container .simbleImg{
+    margin-bottom: 6rem;
+}
+
+.container h1{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.container .description{
+    display: flex;
+}
+
+.container .description img{
+    margin-right: 1rem;
+}
+
+.container .description p{
+    margin: 2.5rem 0;
+    color: var(--text-highlight);
+    width: 30%;
+}
+
+.container form{
+    display: flex;
+}
+
+.container form input{
+    padding: 20px;
+    background: linear-gradient(to right, var(--blue-dark) 20%, var(--blue));
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    outline: 0;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.container form input::placeholder{
+    color: var(--text-highlight);
+}
+
+.container form button{
+    padding: 20px;
+    background-color: var(--blue-dark);
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    font-size: 0;
+    outline: 0;
+}
+
+.container form button:hover{
+    background-color: var(--green);
+}
