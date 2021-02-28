@@ -8,6 +8,9 @@ import { Countdown } from '../components/Countdown';
 import { CompletedChallenges } from '../components/CompletedChallenges';
 import { ChallengeBox } from '../components/ChallengeBox'
 
+import { FormLogin } from '../components/FormLogin'
+import { useSession } from 'next-auth/client'
+
 import { CountdownProvider } from '../contexts/countdownContext';
 import { ChallengesProvider } from '../contexts/ChallengeContext';
 
@@ -24,46 +27,51 @@ export default function
   Home({ level, currentExperience, challengesCompleted }: HomeProps) 
 {
   
+  const [ session, loading ] = useSession()
+
+  console.log(session);
+  
   return (
     <>
       <Head>
         <title>Home | Move.it</title>
       </Head>
 
-      <ChallengesProvider 
-        level={level} 
-        currentExperience={currentExperience} 
-        challengeCompleted={challengesCompleted}
-      >
-        
-        <div className={styles.container}>
+      {session ? (
+        <ChallengesProvider 
+          level={level} 
+          currentExperience={currentExperience} 
+          challengeCompleted={challengesCompleted}
+        >
 
-          <ExperienceBar />
 
-          <CountdownProvider>
-            <section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
-                <Countdown />
-              </div>
-              <div>
-                <ChallengeBox />
-              </div>
-            </section>
-          </CountdownProvider>
-        </div>
+          <div className={styles.container}>
 
-      </ChallengesProvider>
+            <ExperienceBar />
+
+            <CountdownProvider>
+              <section>
+                <div>
+                  <Profile />
+                  <CompletedChallenges />
+                  <Countdown />
+                </div>
+                <div>
+                  <ChallengeBox />
+                </div>
+              </section>
+            </CountdownProvider>
+          </div>
+
+        </ChallengesProvider>
+      ): (
+        <FormLogin/>
+        )}
     </>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const user = {
-    name: 'Leo',
-    age: 20
-  }
 
   const { 
           level, 

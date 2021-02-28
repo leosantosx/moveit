@@ -1,28 +1,33 @@
 import Head from 'next/head'
 import { useState } from 'react';
 import styles from '../styles/components/Login.module.css'
-import { signIn, useSession } from 'next-auth/client'
+import { signIn } from 'next-auth/client'
+import axios from 'axios'
 
-export default function() {
+export function FormLogin() {
 
     const [user, setUser] = useState('')
     const [error, setError] = useState('')
-    const [ session, loading ] = useSession()
 
-    // async function handleFormLogin(){
+    async function handleFormLogin(){
         
-    //     if(!user){
-    //         setError('Digite um nome de usuário')
-    //         return
-    //     }
-       
-    //     console.log(user);
+        if(!user){
+            setError('Digite um nome de usuário')
+            return
+        }
 
-    //     const response = await axios.get('api/github')
+        try{
+            const response = await axios.get(`https://api.github.com/users/${user}`)
+            if(response.status == 200){
+                setError('')
+                signIn('github')
+            }
+        }catch{
+            setError('Ocorreu um erro na requisição')
+        }
 
-    //     console.log(response);
         
-    // }
+    }
 
     return (
         <>
@@ -53,8 +58,8 @@ export default function() {
                         />
                     <button 
                         type="button"
-                        onClick={() => signIn('github')}
-                        >
+                        onClick={handleFormLogin}
+                    >
                         <img src="icons/arrow-left.svg" alt="Entrar"/>
                 </button>
                 </form>
