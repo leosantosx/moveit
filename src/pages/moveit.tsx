@@ -27,7 +27,7 @@ export default function
   Home({ level, currentExperience, challengesCompleted }: HomeProps) 
 {
   
-  const [ session, loading ] = useSession()
+  const [ session ] = useSession()
 
   console.log(session);
   
